@@ -1,0 +1,75 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="--background: #3c8f8f; border-bottom: 0px;">
+    <ion-title style="color: #ffffff; font-size: 20px; text-align: center;">Add to Queue</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <ion-card class="add_form">
+
+    <ion-card-content>
+      <form [formGroup]="queueForm" (ngSubmit)="CreateRecord()">
+
+        <ion-item >
+          <ion-grid>
+            <ion-row class="ion-justify-content-center">
+              <ion-col size="auto">
+                <ion-label style="text-align: center; font-weight: 600; font-size: 20px; color: white;"  >Queue Number</ion-label>
+                <ion-input style="text-align: center; font-weight: 400; font-size: 18px;" readonly formControlName="queue_pos" ></ion-input>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+    
+        <ion-item >
+          <ion-label class="label_class" position="floating">Name</ion-label>
+          <ion-input formControlName="Name"></ion-input>
+        </ion-item>
+    
+        <ion-item >
+          <ion-label class="label_class" position="floating">Age</ion-label>
+          <ion-input type="number" formControlName="Age"></ion-input>
+        </ion-item>
+    
+        <ion-item >
+          <ion-label class="label_class" position="floating">Sex</ion-label>
+
+          <ion-select  class="label_class" formControlName="Sex" >
+            <ion-select-option value="Female">Female</ion-select-option>
+            <ion-select-option value="Male">Male</ion-select-option>
+          </ion-select>
+
+        </ion-item>
+    
+        <ion-item >
+          <ion-label class="label_class" position="floating">Contact Number</ion-label>
+          <ion-input type="number" formControlName="Contact_Number"></ion-input>
+        </ion-item>
+    
+        <ion-item >
+          <ion-label class="label_class" position="floating">Address</ion-label>
+          <ion-input formControlName="Address"></ion-input>
+        </ion-item>
+    
+        <ion-item >
+          <ion-grid>
+            <ion-row class="ion-justify-content-center">
+              <ion-col>
+                <ion-button class="insert_button" size = "small" (click)="CreateRecord()" [disabled]="queueForm.invalid">
+                  <ion-icon name="add-circle"></ion-icon>
+                  &nbsp;Insert to Queue
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+            
+          </ion-item>
+          
+      </form>
+    </ion-card-content>
+
+  </ion-card>
+
+
+</ion-content>

@@ -1,0 +1,34 @@
+ion-content{
+    --background: #c1ebeb;
+}
+
+ion-input{
+    --color: white;
+}
+
+ion-item {
+    --ion-item-background: transparent;
+    --border-color: #c2c2c2;
+}
+
+.add_form{
+    background: linear-gradient(180deg, rgba(61,175,176,1) 0%, rgba(159,210,210,1) 100%);
+    color: whitesmoke; 
+}
+
+.label_class
+{
+    color: whitesmoke !important;
+}
+
+ion-button{
+    --color:white;
+    --background: #6bbfc0;
+
+    --color-hover: #55fcff;
+    --color-focused: #55fcff;
+    --background-hover: #3c8f8f;
+    --background-focused: #3c8f8f;
+}
+
+

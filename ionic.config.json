@@ -1,0 +1,7 @@
+{
+  "name": "VacSiteQueSys_User",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
